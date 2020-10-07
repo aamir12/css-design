@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    
+    <style>
+      .wrapper{
+          display: flex;
+          flex-wrap: nowrap;
+          width: 100%;
+          justify-items: center; 
+                       
+      }
+
+      .wrapper  div{
+          background: #eee;          
+          margin: 0.4rem;
+          padding: 0.3rem; 
+          width: 20%;         
+          min-width: 200px; 
+          border:solid 1px #ff0000;
+      }
+
+      li { 
+          margin: 5px; 
+          padding: 5px; 
+          width: auto;
+          border:solid 1px green;
+        }
+
+    .connectedSortable{
+        height: 100%;   
+        padding: 0px;     
+        list-style-type: none; 
+        border: solid 1px black;
+        overflow: auto;
+    }
+
+    @media (max-width: 992px){
+        .wrapper{
+            overflow-x: scroll;
+        }
+    }
+   
+      
+    </style>
+
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<script src="jquery.ui.touch-punch.min.js"></script>
+<script>
+$( function() {
+  $("#Section0,#Section1, #Section2, #Section3, #Section4, #Section5").sortable({
+    connectWith: ".connectedSortable"
+  });
+} );
+</script>
+
+
+</head>
+<body>
+    <div class="wrapper">
+        <div>
+            <h3>Section 0</h3>
+            <ul id="Section0" class="connectedSortable">
+                <li>Item1</li>
+                <li>Item2</li>
+                <li>Item3</li>
+                <li>Item4</li>
+                <li>Item5</li>
+            </ul>    
+        </div>
+        <div>
+            <h3>Section 1 </h3>
+            <ul id="Section1" class="connectedSortable">
+                <li>Item1</li>
+                <li>Item2</li>
+                <li>Item3</li>
+                <li>Item4</li>
+                <li>Item5</li>
+            </ul>
+        </div>
+
+        <div> 
+            <h3>Section 2</h3>
+            <ul id="Section2" class="connectedSortable">
+                <li>Item1</li>
+                <li>Item2</li>
+                <li>Item3</li>
+                <li>Item4</li>
+                <li>Item5</li>
+            </ul>    
+        </div>
+        <div>
+            <h3>Section 3</h3>
+            <ul id="Section3" class="connectedSortable">
+                <li>Item1</li>
+                <li>Item2</li>
+                <li>Item3</li>
+                <li>Item4</li>
+                <li>Item5</li>
+            </ul>    
+        </div>
+        <div>
+            <h3>Section 4</h3>
+            <ul id="Section4" class="connectedSortable">
+                <li>Item1</li>
+                <li>Item2</li>
+                <li>Item3</li>
+                <li>Item4</li>
+                <li>Item5</li>
+            </ul>    
+        </div>
+    </div>
+</body>
+</html>

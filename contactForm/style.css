@@ -1,0 +1,158 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100&display=swap');
+
+*{
+  margin:0px;
+  padding:0px;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #22447b;
+    min-height: 100vh;
+}
+
+.container{
+   position: relative;
+   width: 100%;
+   max-width: 1100px;
+   margin:20px;
+   height: 600px;
+   background: #122647;
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   margin:20px;
+}
+
+.container .frmBx{
+    width: 50%;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.frmBx form{
+    position: relative;
+    width: 100%;
+    padding:0 0 0 75px;
+}
+
+.frmBx form h2{
+    margin-bottom: 40px;
+    text-transform: uppercase;
+    color:#fff;
+    font-weight: 500;
+    font-size: 2em;
+    letter-spacing: 2px;
+}
+
+.frmBx form .inputBox{
+  position: relative;
+  margin-bottom:40px;
+}
+
+.frmBx form .inputBox:last-child{
+    margin-bottom:0px;
+}
+
+.frmBx form .inputBox input,
+.frmBx form .inputBox textarea{
+    position: relative;
+    background: transparent; 
+    border:none;
+    outline:none;
+    width: 100%;
+    font-size: 16px;
+    font-weight: 300;
+    padding-bottom: 10px;
+    border-bottom: solid 2px rgba(255,255,255,0.25);
+    letter-spacing: 2px;
+    resize: none;
+  }
+
+  .frmBx form .inputBox input[type="submit"]{
+    width: 100px;
+    color: #fff;
+    background: #ff5064;
+    padding: 8px 20px;
+    font-size: 14px;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    border: none;
+    margin-top: -10px;
+    cursor: pointer;
+  }
+
+
+
+  .frmBx form .inputBox span{
+    position: absolute;
+    left: 0;
+    color: rgba(255,255,255,0.25);
+    pointer-events: none;
+    display: inline-block;
+    font-weight: 300;
+    font-size: 16px;
+    letter-spacing: 2px;
+    transition: all 0.5s;
+  }
+
+.frmBx form .inputBox input:focus ~ span,
+.frmBx form .inputBox textarea:focus ~ span,
+.frmBx form .inputBox input:valid ~ span,
+.frmBx form .inputBox textarea:valid ~ span{
+  transform: translateY(-24px);
+  color:#1bfaad;
+  font-size: 14px;
+}
+
+.frmBx form .inputBox input:focus,
+.frmBx form .inputBox textarea:focus ,
+.frmBx form .inputBox input:valid,
+.frmBx form .inputBox textarea:valid{
+    border-bottom:solid 1px #fff;
+    color:#fff;
+}
+
+.frmBx form .inputBox input[type="submit"]:focus,
+.frmBx form .inputBox input[type="submit"]:valid{
+    border:none;
+    
+}
+
+.frmBx form .inputBox input[type="submit"]:hover{
+    background:#1bfaad;
+    color: #fff;
+}
+
+.container .imgBx{
+  position: relative;
+  width: 50%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.container .imgBx::before{
+    position: absolute;
+    content: '';
+    left:0;
+    top:0;
+    width: 100%;
+    height: 100%;
+    background:#ff5064;
+    transform-origin: bottom;
+    transform: skewX(-25deg) translateX(10%);
+}
+
+.imgBx img{
+    position: absolute;
+    max-height: 95%;
+    bottom:0;
+
+}
+
