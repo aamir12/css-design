@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Login</title>
+    <link rel="stylesheet" href="loginstyle.css">
+</head>
+<body>
+    <div class="backdrop"></div>
+    <header class="main-header">
+        <div class="mobResBtn">
+            <button class="toggle-button">
+                <span class="toggle-button__bar"></span>
+                <span class="toggle-button__bar"></span>
+                <span class="toggle-button__bar"></span>
+            </button>
+            <a href="index.html" class="main-header__brand">
+               Examineer
+            </a>
+        </div>
+        <nav class="main-nav">
+            <ul class="main-nav__items">
+                <li class="main-nav__item">
+                    <a href="packages/index.html">Student</a>
+                </li>
+                <li class="main-nav__item">
+                    <a href="customers/index.html">Author</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <nav class="mobile-nav">
+        <ul class="mobile-nav__items">
+            <li class="mobile-nav__item">
+                <a href="packages/index.html">Student</a>
+            </li>
+            <li class="mobile-nav__item">
+                <a href="customers/index.html">Author</a>
+            </li>
+          
+        </ul>
+    </nav>
+
+    <div class="mainContainer">
+        <div class="mainImgBox">
+            <img src="https://quiz.examineer.org/assets/img/student.png" alt="">
+        </div>
+        <div class="mainLoginFrm">
+            <img src="https://quiz.examineer.org/assets/img/logo.png" alt="">
+            <form name="loginForm" class="lgFrm ">	
+                <div class="group">
+                    <input type="text" id="quizId" style="text-transform: uppercase;" name="quizId" ng-model="user.quizId" required="" class="ng-pristine ng-invalid ng-invalid-required"><span class="highlight"></span><span class="bar"></span>
+                    <label class="ng-binding">Quiz ID</label>
+                </div>
+                <div class="group">
+                    <input type="text" name="uname" id="uname" ng-model="user.uname" required="" class="ng-pristine ng-invalid ng-invalid-required"><span class="highlight"></span><span class="bar"></span>
+                    <label class="ng-binding">User Name</label>
+                </div>
+                <div class="group">
+                    <input type="password" id="pwd" name="pwd" ng-model="user.pwd" required="" class="ng-pristine ng-invalid ng-invalid-required"><span class="highlight"></span><span class="bar"></span>
+                    <label class="ng-binding">Password</label>
+                    <div class="eye-btn">
+                        <i id="eyeIcon" class="fa fa-eye viewPas"></i>
+                    </div>
+                    <span class="capson-msg">Caps Lock is on</span>
+                </div>
+
+                <div class="text-center">
+                    <button class="btn btn-block btn-fill btn-default loginBtn" type="button" ng-click="getlogin()" ng-disabled="loginForm.uname.$invalid || loginForm.pwd.$invalid || loginForm.quizId.$invalid || logReq" disabled="disabled">Login</button>
+                </div>
+                
+                <div class="text-center" style="margin-top:20px;">
+                        <a href="#" data-toggle="modal" data-target="#fireFoxMdl" id="firefoxHelpLink" data-backdrop="static" class="bowerLink">Trouble logging in on Firefox ?</a>
+                </div>
+            </form>
+        </div>
+    </div>
+
+
+</body>
+<script src="loginjs.js"></script>
+</html>
