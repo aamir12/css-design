@@ -156,3 +156,16 @@ body{
 
 }
 
+
+@media (max-width: 805px ){
+  .container .imgBx{
+    display: none;
+  }
+  .container .frmBx {
+    width: 88%;
+  }
+  .frmBx form {
+    padding-left: 60px;
+  }
+}
+

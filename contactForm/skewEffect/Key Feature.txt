@@ -1,0 +1,52 @@
+
+/*Skew effect*/
+.container .imgBx{
+  position: relative;
+  width: 50%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.container .imgBx::before{
+    position: absolute;
+    content: '';
+    left:0;
+    top:0;
+    width: 100%;
+    height: 100%;
+    background:#ff5064;
+    transform-origin: bottom;
+    transform: skewX(-25deg) translateX(10%);
+}
+
+
+  .frmBx form .inputBox span{
+    position: absolute;
+    left: 0;
+    color: rgba(255,255,255,0.25);
+    pointer-events: none;
+    display: inline-block;
+    font-weight: 300;
+    font-size: 16px;
+    letter-spacing: 2px;
+    transition: all 0.5s;
+  }
+
+/*Transform label*/
+
+.frmBx form .inputBox input:focus ~ span,
+.frmBx form .inputBox textarea:focus ~ span,
+.frmBx form .inputBox input:valid ~ span,
+.frmBx form .inputBox textarea:valid ~ span{
+  transform: translateY(-24px);
+  color:#1bfaad;
+  font-size: 14px;
+}
+
+.frmBx form .inputBox input:focus,
+.frmBx form .inputBox textarea:focus ,
+.frmBx form .inputBox input:valid,
+.frmBx form .inputBox textarea:valid{
+    border-bottom:solid 1px #fff;
+    color:#fff;
+}

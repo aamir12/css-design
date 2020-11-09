@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SideDrawer</title>
+    <link rel="stylesheet" href="style1.css" />
+  </head>
+  <body>
+    <header>
+      <div class="drawerBtn">
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+
+      <div class="logo">
+        <img src="logo.png" alt="" />
+      </div>
+
+      <nav id="menuBar">
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About us</a></li>
+          <li><a href="#">Contact us</a></li>
+        </ul>
+      </nav>
+    </header>
+    <div class="backdrop"></div>
+
+    <div class="content">
+      <p>Hello world</p>
+    </div>
+  </body>
+
+  <script>
+    const drawerBtn = document.querySelector(".drawerBtn");
+    const menuBar = document.querySelector("#menuBar");
+    const backdrop = document.querySelector(".backdrop");
+
+    drawerBtn.addEventListener("click", function () {
+      backdrop.classList.toggle("disBlock");
+      menuBar.classList.toggle("open");
+    });
+
+    backdrop.addEventListener("click", function () {
+      backdrop.classList.toggle("disBlock");
+      menuBar.classList.toggle("open");
+    });
+  </script>
+</html>

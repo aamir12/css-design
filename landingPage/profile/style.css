@@ -1,52 +1,14 @@
-@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+@import url("https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap");
 
 * {
   margin: 0;
   padding: 0;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   box-sizing: border-box;
 }
 
-.banner {
-  position: relative;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  min-height: 100vh;
-  background-image: url('images/banner.jpg');
-  background-size: cover;
-  background-position: right;
-  padding: 100px;
-}
-
-.banner h2 {
-  font-size: 3em;
-  color: #fff;
-  font-weight: 500;
-  line-height: 1.5em;
-}
-
-.banner h2 span {
-  font-size: 1.5em;
-  font-weight: 700;
-}
-.banner h3 {
-  font-size: 1.5em;
-  color: #fff;
-  font-weight: 500;
-}
-
-.textBx a {
-  text-decoration: none;
-  color: #fff;
-  background-color: #2196f3;
-  padding: 10px 15px;
-  display: inline-block;
-  margin-top: 20px;
-}
-
 header {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
@@ -55,24 +17,26 @@ header {
   align-items: center;
   z-index: 1000;
   padding: 30px 100px;
+  transition: 0.3s;
 }
 
-header .logo {
-  color: #fff;
-  font-weight: 500;
-  text-decoration: none;
-  font-size: 1.5em;
-  text-transform: uppercase;
-  letter-spacing: 2px;
+header.sticky {
+  background: #fff;
+  padding: 20px 100px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
 }
 
 header .logo {
   color: #fff;
   font-weight: 700;
   text-decoration: none;
-  font-size: 24px;
+  font-size: 1.5em;
   text-transform: uppercase;
   letter-spacing: 2px;
+}
+
+header.sticky .logo {
+  color: #111;
 }
 
 header ul {
@@ -93,4 +57,153 @@ header ul li a {
   display: inline-block;
   color: #fff;
   margin: 0px 15px;
+}
+
+header.sticky ul li a {
+  color: #111;
+}
+
+.banner {
+  position: relative;
+  display: flex;
+  /* justify-content: space-between; */
+  align-items: center;
+  min-height: 100vh;
+  background-image: url("images/banner.jpg");
+  background-size: cover;
+  background-position: right;
+  padding: 100px;
+}
+
+.banner:before {
+  content: "";
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  background-color: #fff;
+  height: 200px;
+  clip-path: polygon(0 76%, 38% 86%, 100% 100%, 0% 100%);
+  left: 0px;
+}
+
+.overlay {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(red, blue);
+  mix-blend-mode: overlay;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.textBx {
+  z-index: 1;
+}
+
+.banner .textBx h2 {
+  font-size: 3em;
+  color: #fff;
+  font-weight: 500;
+  line-height: 1.5em;
+}
+
+.banner .textBx h2 span {
+  font-size: 1.5em;
+  font-weight: 700;
+}
+.banner h3 {
+  font-size: 1.5em;
+  color: #fff;
+  font-weight: 500;
+}
+
+.textBx a {
+  text-decoration: none;
+  color: #fff;
+  background-color: #2196f3;
+  padding: 10px 15px;
+  display: inline-block;
+  margin-top: 20px;
+}
+
+.heading {
+  width: 100%;
+  text-align: center;
+  margin: 50px 0px;
+  color: #111;
+  font-size: 1.5em;
+}
+
+.heading p {
+  font-size: 0.8em;
+}
+
+.about .content {
+  display: flex;
+  justify-content: space-between;
+  padding: 50px 100px;
+}
+.about .contentBx {
+  padding-right: 50px;
+}
+
+.contentBx h3 {
+  font-size: 1.3em;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.content img {
+  max-width: 100%;
+}
+.w50 {
+  min-width: 50%;
+}
+
+.services {
+  background: #111;
+  padding: 0.5px;
+}
+
+.heading.white {
+  color: #fff;
+}
+.heading p {
+  font-size: 0.8em;
+}
+
+.services .content {
+  display: flex;
+  padding: 20px 100px;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.services .serviceBx {
+  max-width: 340px;
+  margin: 30px;
+  text-align: center;
+  transition: 0.4s;
+  color: #fff;
+  padding: 40px 20px;
+  border: solid 1px #fff;
+  border-radius: 5px;
+  background-color: #4242429e;
+}
+
+.services .serviceBx:hover {
+  background: #2196f3;
+}
+
+.services .serviceBx:hover img {
+  filter: invert(1);
+}
+
+.services .serviceBx h2 {
+  margin: 10px auto;
+}
+.services .serviceBx img {
+  max-width: 80px;
 }

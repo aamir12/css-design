@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Modal</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="backdrop"></div>
+    <div class="modal">
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum hic
+        fugiat, magni similique aut reprehenderit itaque nemo doloribus
+        reiciendis minus fugit repellat modi accusamus culpa quas exercitationem
+        molestiae architecto! Doloremque?
+      </p>
+    </div>
+    <div class="container">
+      <h1>Hello world</h1>
+      <button class="btn" id="toggleBtn">Open Modal</button>
+    </div>
+  </body>
+
+  <script>
+    const btn = document.querySelector("#toggleBtn");
+    const modal = document.querySelector(".modal");
+    const backdrop = document.querySelector(".backdrop");
+    btn.addEventListener("click", function () {
+      backdrop.classList.toggle("dis-block");
+      modal.classList.toggle("open");
+    });
+
+    backdrop.addEventListener("click", function () {
+      modal.classList.toggle("open");
+      backdrop.classList.toggle("dis-block");
+    });
+  </script>
+</html>
