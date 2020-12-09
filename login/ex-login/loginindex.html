@@ -45,11 +45,11 @@
 
     <div class="mainContainer">
         <div class="mainImgBox">
-            <img src="https://quiz.examineer.org/assets/img/student.png" alt="">
+          
         </div>
         <div class="mainLoginFrm">
             <img src="https://quiz.examineer.org/assets/img/logo.png" alt="">
-            <form name="loginForm" class="lgFrm ">	
+            <form name="loginForm" class="lgFrm">	
                 <div class="group">
                     <input type="text" id="quizId" style="text-transform: uppercase;" name="quizId" ng-model="user.quizId" required="" class="ng-pristine ng-invalid ng-invalid-required"><span class="highlight"></span><span class="bar"></span>
                     <label class="ng-binding">Quiz ID</label>
@@ -71,8 +71,9 @@
                     <button class="btn btn-block btn-fill btn-default loginBtn" type="button" ng-click="getlogin()" ng-disabled="loginForm.uname.$invalid || loginForm.pwd.$invalid || loginForm.quizId.$invalid || logReq" disabled="disabled">Login</button>
                 </div>
                 
-                <div class="text-center" style="margin-top:20px;">
+                <div class="text-center" style="margin-top:20px;display:flex;flex-direction: column;">
                         <a href="#" data-toggle="modal" data-target="#fireFoxMdl" id="firefoxHelpLink" data-backdrop="static" class="bowerLink">Trouble logging in on Firefox ?</a>
+                        
                 </div>
             </form>
         </div>
