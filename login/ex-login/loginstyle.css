@@ -226,13 +226,13 @@ main {
 }
   
 .lgFrm .group:nth-of-type(1) {
-  margin-top: 10px 0;
+  margin-top: 50px;
 }
   
 .lgFrm input{
     background: none;
     color: #3b3b44;
-    font-size: 16px;
+    font-size: 14px;
     padding: 10px 10px 10px 0px;
     display: block;
     width: 270px;
